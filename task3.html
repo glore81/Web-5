@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Task 3</title>
+</head>
+<body class="p-3">
+    <div id="container" class="p-4 mb-3 border rounded text-center">
+        <p id="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis harum totam ex! Quas blanditiis molestias dolor tempore eaque atque maxime numquam nam asperiores aliquid accusamus quaerat, sit, nostrum odio in.</p>
+        <button class="btn btn-dark" id="inButton">Increase size</button>
+        <button class="btn btn-dark" id="deButton">Decrease size</button>
+    </div>
+    <button class="btn btn-dark" id="colorBtn">Change background</button>
+    <script>
+        const increase = document.getElementById("inButton");
+        const decrease = document.getElementById("deButton");
+        const box = document.getElementById("container");
+        const colorBtn = document.getElementById("colorBtn");
+        const text = document.getElementById("text"); 
+        let currentSize = 16;
+
+        colorBtn.addEventListener("click", function(){
+            if(box.style.backgroundColor != "black"){
+                box.style.backgroundColor = "black";
+                box.style.color = "white";
+            }
+            else {
+                box.style.backgroundColor = "white";
+                box.style.color = "black";
+            }
+        })
+
+        increase.addEventListener("click", function() {
+            if(currentSize <= 48){
+                currentSize+= 4;
+                text.style.fontSize = currentSize + "px";
+            }
+        });
+
+        decrease.addEventListener("click", function() {
+            if(currentSize > 8){
+                currentSize -= 4;
+                text.style.fontSize = currentSize + "px";
+            }
+        });
+    </script>
+</body>
+</html>
