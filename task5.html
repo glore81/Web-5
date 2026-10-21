@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task 5</title>
+</head>
+<body class="p-3">
+    <div id="hoverBox">
+        Hover mouse
+    </div>
+    <script>
+        const hover = document.getElementById("hoverBox");
+        hover.addEventListener("mouseover", function(){
+            hover.style.backgroundColor = "gray";
+            hover.textContent = "Mouse Inside";
+            hover.style.color = "black";
+        });
+
+        hover.addEventListener("mouseout", function(){
+            hover.style.backgroundColor = "black";
+            hover.textContent = "Mouse Outside";
+            hover.style.color = "white";
+        });
+    </script>
+</body>
+</html>
