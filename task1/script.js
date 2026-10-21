@@ -8,4 +8,4 @@ console.log(a+b);
 console.log(a-b);
 console.log(a*b);
 console.log(a/b);
-console.log(str1 + " " + str2)
+console.log(str1 + " " + str2);
