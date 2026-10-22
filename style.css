@@ -25,3 +25,10 @@ a {
     width: 200px;
     height: 200px;
 }
+
+.calculator {       
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}

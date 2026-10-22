@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task 7</title>
+</head>
+<body class="p-3">
+    <h2>Calculator</h2>
+    <div class="calculator">
+        <input type="number" id="num1" placeholder="Number 1">
+
+        <select name="" id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="num2" placeholder="Number 2">
+
+        <button id="calcBtn">Calculate</button>
+    </div>
+    <h3>Result: <span id="result">0</span></h3>
+    <script>
+        const num1Input  = document.getElementById("num1");
+        const num2Input = document.getElementById("num2");
+        const operatorSelect  = document.getElementById("operator");
+        const btn = document.getElementById("calcBtn");
+        const result = document.getElementById("result");
+
+        btn.addEventListener("click", function(){
+            let num1 = parseFloat(num1Input.value);
+            let num2 = parseFloat(num2Input.value);
+            let operator = operatorSelect.value;
+            let res;
+
+            if(isNaN(num1) || isNaN(num2)){
+                result.textContent = "Please enter both numbers!";
+                return;
+            }
+
+            switch (operator){
+                case "+":
+                    res = num1 + num2;
+                    break;
+                case "-":
+                    res = num1 - num2;
+                    break;
+                case "*":
+                    res = num1 * num2;
+                    break;
+                case "/":
+                    if(num2 == 0){
+                        res = "Division by 0 impossible"
+                    }
+                    else{
+                        res = num1 / num2;
+                    }
+                    break;
+            }
+            result.textContent = res;
+        });
+    </script>
+</body>
+</html>
