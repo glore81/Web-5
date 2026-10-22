@@ -32,3 +32,8 @@ a {
     gap: 10px;
     margin-bottom: 20px;
 }
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
